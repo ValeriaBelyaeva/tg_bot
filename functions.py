@@ -1,10 +1,10 @@
-from aiogram import Dispatcher, Bot, F
+from aiogram import F
 from aiogram.filters import CommandStart
-from aiogram.types import (KeyboardButton, Message, ReplyKeyboardMarkup)
+from aiogram.types import Message
 from constants import *
 import requests
 
-from data import keyboard, bot, dp
+from data import keyboard, dp
 
 @dp.message(CommandStart())
 async def process_start_command(message: Message):
