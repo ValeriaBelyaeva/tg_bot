@@ -13,13 +13,6 @@ async def process_start_command(message: Message):
         reply_markup=keyboard
     )
 
-@dp.message(CommandStart())
-async def process_start_command(message: Message):
-    await message.answer(
-        text='Чего ты хочешь?',
-        reply_markup=keyboard
-    )
-
 @dp.message(F.text == 'Хочу котика (не 🦮)')
 async def process_dog_answer(message: Message):
     await message.answer(
